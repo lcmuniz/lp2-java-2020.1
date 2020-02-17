@@ -1,1 +1,1 @@
-Repositório para a disciplina Linguagem de Programaço II - Java - 2020.1
+Repositório para a disciplina Linguagem de Programação II - Java - 2020.1
