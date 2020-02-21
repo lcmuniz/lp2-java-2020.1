@@ -1,3 +1,4 @@
+package com.exemplo.javastring;
 
 public class TestaCaracteres {
 
@@ -8,11 +9,11 @@ public class TestaCaracteres {
 		
 		char valor = 65;
 		System.out.println(valor);
-
+		
 		// tabela unicode: https://unicode-table.com/en/
 		char cavalo = 9816;
 		System.out.println(cavalo);
-
+		
 		String frase = "Faculdade do Maranhão";
 		System.out.println(frase);
 		
@@ -22,7 +23,7 @@ public class TestaCaracteres {
 		String titulo = "FACAM";
 		titulo = titulo + " - " + 2020;
 		System.out.println(titulo);
-		
+
 	}
 
 }

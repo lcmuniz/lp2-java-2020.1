@@ -1,3 +1,4 @@
+package com.exemplo.javastring;
 
 public class TestaValores {
 
@@ -8,10 +9,8 @@ public class TestaValores {
 		
 		segundo = primeiro;
 		primeiro = 10;
-		
 		System.out.println(segundo);
-		
-		
+
 	}
 
 }
