@@ -1,9 +1,4 @@
 
-
-
-
-
-
 public class Programa2 {
 
 	public static void main(String[] args) {
@@ -17,27 +12,27 @@ public class Programa2 {
 		maria.cpf = "783763449-22";
 		
 		Conta conta123 = new Conta();
-		conta123.dono = joao;
+		conta123.titular = joao;
 		conta123.saldo = 1000;
 		conta123.numero= 123;
 		
 		Conta conta533 = new Conta();
-		conta533.dono= maria;
+		conta533.titular = maria;
 		conta533.saldo = 100;
 		conta533.numero= 533;
 		
 		System.out.println(conta123.numero);
 		System.out.println(conta123.saldo);
-		System.out.println(conta123.dono.nome);
-		System.out.println(conta123.dono.cpf);
+		System.out.println(conta123.titular.nome);
+		System.out.println(conta123.titular.cpf);
 
 		joao.nome = "João Alberto da Silva";
 		
 		
 		System.out.println(conta123.numero);
 		System.out.println(conta123.saldo);
-		System.out.println(conta123.dono.nome);
-		System.out.println(conta123.dono.cpf);
+		System.out.println(conta123.titular.nome);
+		System.out.println(conta123.titular.cpf);
 	
 	}
 	

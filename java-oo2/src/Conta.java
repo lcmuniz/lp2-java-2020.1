@@ -7,7 +7,7 @@
 public class Conta {
 
 	int numero;
-	Cliente dono;
+	Cliente titular;
 	double saldo;
 	
 	boolean sacar(double valor) {
