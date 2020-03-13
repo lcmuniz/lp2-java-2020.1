@@ -1,11 +1,7 @@
+import java.util.Date;
 
+public class Cliente extends Pessoa {
 
-
-
-
-public class Cliente {
-
-	String nome;
-	String cpf;
+	Date dataDeNascimento; 
 	
 }

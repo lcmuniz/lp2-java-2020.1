@@ -1,53 +1,51 @@
+import java.util.Date;
 
 public class Programa1 {
 
 	public static void main(String[] args) {
 
-		Conta minhaConta;
-		Conta outraConta;
+		Gerente mario = new Gerente();
+		mario.nome = "Mario Albuquerque";
+		mario.cpf = "777333555-77";
+		mario.matricula = "AJ72384732";
 		
 		Cliente joao = new Cliente();
 		joao.nome = "João da Silva";
 		joao.cpf = "929939929-22";
-		
-		minhaConta = new Conta();
-		
-		minhaConta.titular = joao;
-		minhaConta.saldo = 1000;
+		joao.dataDeNascimento = new Date();
 		
 		Cliente maria = new Cliente();
 		maria.nome = "Maria Augusta";
 		maria.cpf = "847342222-23";
 
-		outraConta = new Conta();
+		Conta contaJoao = new Conta();
 		
-		outraConta.titular = maria;
-		outraConta.saldo = 200;
+		contaJoao.agencia = 2123;
+		contaJoao.numero = 234234;
+		contaJoao.titular = joao;
+		contaJoao.saldo = 1000;
+		
+		ContaEspecial contaMaria = new ContaEspecial();
+		
+		contaMaria.agencia = 2123;
+		contaMaria.numero = 21231;
+		contaMaria.titular = maria;
+		contaMaria.saldo = 300;
+		contaMaria.valorChequeEspecial = 1000;
+		
+		System.out.println("Saldo de Maria: " + contaMaria.saldo);
+		System.out.println("Limite disponível de Maria: " + contaMaria.limiteAtual());
 
-		System.out.println("Saldo atual de " + minhaConta.titular.nome + ": " + minhaConta.saldo);
-		System.out.println("Saldo atual de " + outraConta.titular.nome + ": " + outraConta.saldo);
+		System.out.println("Saldo de João: " + contaJoao.saldo);
 
-		boolean retorno = minhaConta.sacar(400);
-		if (retorno) {
-			System.out.println("Saque efetuado");
-		}
-		else {
-			System.out.println("Saldo insuficiente");
-		}
-		
-		outraConta.depositar(600);
-		
-		System.out.println("Saldo atual de " + minhaConta.titular.nome + ": " + minhaConta.saldo);
-		System.out.println("Saldo atual de " + outraConta.titular.nome + ": " + outraConta.saldo);
-		
-		boolean ret = minhaConta.transferir(100, outraConta);
-		if (!ret) {
-			System.out.println("Transferência não foi realizada");
-		}
+		contaMaria.sacar(1200);
+		contaMaria.depositar(100);;
+		contaMaria.transferir(200, contaJoao);
 
-		System.out.println("Saldo atual de " + minhaConta.titular.nome + ": " + minhaConta.saldo);
-		System.out.println("Saldo atual de " + outraConta.titular.nome + ": " + outraConta.saldo);
-		
-	}
+		System.out.println("Saldo de Maria: " + contaMaria.saldo);
+		System.out.println("Limite disponível de Maria: " + contaMaria.limiteAtual());
+
+		System.out.println("Saldo de João: " + contaJoao.saldo);
+}
 
 }
