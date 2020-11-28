@@ -28,6 +28,7 @@ public class Janela10 extends JFrame {
 			// System.out.println(resposta);
 			
 			// String nome = JOptionPane.showInputDialog("Digite seu nome");
+			
 			// System.out.println(nome);
 			
 			ImageIcon icon = new ImageIcon("iconeapp.png");
